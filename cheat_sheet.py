@@ -96,10 +96,37 @@ print()
 
 # On peut utiliser "not" dans les conditions d'une boucle while
 
-password = ""
+# password = ""
 
-while not password == "1234":
-    password = input("What is the password? ")
+# while not password == "1234":
+#     password = input("What is the password? ")
 
-print("password is correct, you have access to the account.")
+# print("password is correct, you have access to the account.")
+
+####################################################
+            # fonction / function
+####################################################
+
+# la fonction retourne une information
+# par convention on sépare deux définitions de fonctions par deux sauts de ligne
+
+# portée des variables:
+# une variable déclarée dans une fonction n'existe qu'à l'intérieur de cette dernière
+# une fois sortie de la fonction, la variable est supprimmée
+# on peut donc réutiliser des noms de variables extérieur à la fonction
+# pour faire appel à une variable en dehors de la fonction, on ajout le terme "global" avant l'appel de cette dernière
+# exemple :
+# global name = ""
+# changera directement la valeur de name en dehors de la fonction en lui affectant une string vide
+
+# def ask_for_the_name():                         # def pour définir la fonction
+#     name = ""
+#     while name == "":
+#         print("Please, enter a name : ")
+#         name = input()
+#     return name                                 # return pour indiquer la variable à retourner
+
+####################################################
+            # 
+####################################################
 
