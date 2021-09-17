@@ -2,6 +2,18 @@
 # print()
 
 ####################################################
+                # variable / constant
+####################################################
+
+# ma_variable = 1
+# ma_seconde_variable = "deux"
+# ma_troisième_variable = 1.75
+# MA_CONSTANTE = 3
+
+# Les constantes n'existe pas en python, néanmoins par convention,
+# on écrit le nom des variables dont on ne veut pas voir changer les valeurs en majuscules
+
+####################################################
                         # print
 ####################################################
 
@@ -12,6 +24,19 @@ print()
 # je peux print des str et des int, 
 # mais dans le cas d'un int, il devra être seul ou cast préalablement en str
 # on ne peut concaténer un int avec un str autrement
+
+# On peut également print sur plusieurs ligne simplement
+
+print("""
+ , __           _                  
+/|/  \         | |                 
+ |___/     _|_ | |     __   _  _   
+ |    |   | |  |/ \   /  \_/ |/ |  
+ |     \_/|/|_/|   |_/\__/   |  |_/
+         /|                        
+         \|  
+
+""")
 
 ####################################################
                         # input()
@@ -64,6 +89,10 @@ print()
 # variable_int_test = 147
 # print(str(variable_int_test))
 
+# convertir un string en float
+# variable_string_test2 = "1.75"
+# my_first_float = float(variable_string_test2)
+
 ####################################################
                 # try / except
 ####################################################
@@ -83,14 +112,14 @@ print()
 #     print("vous devez rentrer un nombre.")
 
 ####################################################
-                # boucle while
+            # while loop / boucle while
 ####################################################
 
 # boucle while qui va içi s'effectuer 5 fois
 
-# n = 0
+# n = 0                         # On déclare une variable
 
-# while n < 5:
+# while n < 5:                  # On donne la condition avec laquelle la boucle prendra fin
 #     print("ligne " + str(n))
 #     n += 1
 
@@ -104,6 +133,15 @@ print()
 # print("password is correct, you have access to the account.")
 
 ####################################################
+            # for loop / boucle for
+####################################################
+
+# la boucle for s'exécutera pour un nombre de tour donné
+
+# for i in range(0, 4):       # for (déclaration de la boucle) i (par convention, i pour index) in range(0, 4) de 0 à 3
+#     print(i)
+
+####################################################
             # fonction / function
 ####################################################
 
@@ -115,6 +153,7 @@ print()
 # une fois sortie de la fonction, la variable est supprimmée
 # on peut donc réutiliser des noms de variables extérieur à la fonction
 # pour faire appel à une variable en dehors de la fonction, on ajout le terme "global" avant l'appel de cette dernière
+
 # exemple :
 # global name = ""
 # changera directement la valeur de name en dehors de la fonction en lui affectant une string vide
@@ -126,7 +165,94 @@ print()
 #         name = input()
 #     return name                                 # return pour indiquer la variable à retourner
 
+# paramètre(s) et paramètre(s) optionnel(s)
+
+# fonction avec paramètres, à l'appel de la fonction on appelle les paramètres des arguments
+# def print_firstname_and_name(firstname = "John", name = "Doe"): # içi j'ai affecté des valeurs par défaut aux paramètres
+#     print(firstname + " " + name)
+
+# si jamais l'un des paramètres n'était pas donné, la fonction imprimmerait la valeur par défaut
+# les paramètres optionnels doivent toujours se situer en fin de liste
+
+# print_firstname_and_name()
+# print_firstname_and_name("Fabien", "Dragne")
+# print_firstname_and_name("Fabien")
+
+# je ne peux appeler ma fonction avec un argument vide suivi d'arguments
+# si je veux un équivalent, il me faudra prévoir au sein de la fonction un comportement
+# pour un argument "absent", par exemple en mettant "None"
+
+# https://stackoverflow.com/questions/28569551/is-it-correct-to-pass-none-to-a-parameter
+# https://realpython.com/python-optional-arguments/#using-python-optional-arguments-with-default-values
+
+
 ####################################################
-            # 
+                # conditions
 ####################################################
 
+# age = 7
+
+# if age >= 18:                       # si age est plus grand ou égale à 18 alors...
+#     print("You are an adult")
+# elif age <= 3:                      # sinon si age est plus petit ou égale à 3 alors...
+#     print("You are a baby")         # ("elif" pour "else if")
+# else:                               # sinon...
+#     print("Your are a minor")
+
+# Je peux mettre autant de elif que nécessaire
+
+# Même si l'indentation peut sembler indiquer le contraire, if, elif et else dans cet exemple
+# font parti du même bloc de code, si les conditions de if sont validées, alors les instructions
+# suivantes dans elif et else ne seront pas utilisées
+
+# Si l'on voulait que les trois conditions sont vérifiées indépendament, alors il faudrait remplacer
+# elif et else par if
+
+####################################################
+                # comparaison
+####################################################
+
+# == equality
+
+# > plus grand que
+# >= plus grand ou égale que
+
+# < plus petit que
+# <= plus petit ou égale que
+
+# bool : True/False la majuscule est nécessaire
+
+# and : et
+# or : ou
+
+# exemple
+
+# age = 17
+#                                             # comme on compare deux fois la variable age, on peut l'écrire:
+# if age < 18 and age >= 10:                  # if 10 <= age < 18:
+#     print("You are a teenager.")
+# elif age < 10 or age >= 18:                 # Un simple else aurait pu suffir, mais c'est pour l'exemple
+#     print("You are not a teenager.")
+
+####################################################
+                # 
+####################################################
+
+####################################################
+                # 
+####################################################
+
+####################################################
+                # 
+####################################################
+
+####################################################
+                # 
+####################################################
+
+def exit_programm():
+    print("")
+    print("Please press any key to exit the programm.")
+    input("")
+
+exit_programm()
