@@ -235,12 +235,29 @@ print("""
 #     print("You are not a teenager.")
 
 ####################################################
-                # 
+                # import
 ####################################################
 
+# pour importer des "modules" (basiquement des bibliothèque):
+# exemple:
+
+# import turtle               # j'importe mon module
+
+# t = turtle.Turtle()         # j'initialise une variable t, nécessaire au module
+
+# # ...                       les instructions pour déplacer la tortue
+
+# turtle.done()               # empêche la fenêtre graphique de se fermer
+
 ####################################################
-                # 
+                # increment / decrement
 ####################################################
+
+# l'utilisation de l'incrémentation avec ++ n'existe pas en python
+# on utilise simplement le +=
+
+# a = 1
+# a += 1              # donc 2
 
 ####################################################
                 # 
