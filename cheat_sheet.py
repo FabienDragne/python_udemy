@@ -13,6 +13,24 @@
 # Les constantes n'existe pas en python, néanmoins par convention,
 # on écrit le nom des variables dont on ne veut pas voir changer les valeurs en majuscules
 
+# Pour affecter une variable globale depuis un bloc de code, 
+# on "redéclare" d'abord notre variable à l'intérieur de ce dernier précédé du mot "global",
+# puis on peut intéragir normalement avec au sein du bloc
+
+# exemple:
+
+# c = 0 # global variable
+
+# def add():
+#     global c
+#     c = c + 2 # increment by 2
+#     print("Inside add():", c)
+
+# add()
+# print("In main:", c)
+
+# https://www.programiz.com/python-programming/global-keyword
+
 ####################################################
                         # print
 ####################################################
@@ -94,7 +112,7 @@ print("""
 # my_first_float = float(variable_string_test2)
 
 ####################################################
-                # try / except
+            # try / except / finally / else
 ####################################################
 
 # Pour prévoir le comportement du programme en cas d'erreur
@@ -110,6 +128,13 @@ print("""
 # except:
 #     print("L'opération ne peut fonctionner")                # action en cas d'échec
 #     print("vous devez rentrer un nombre.")
+# finally:                                                       
+#     print("L'opération n'a rencontré aucun problème")         # action si aucun échec
+# else:                               
+#     print("")                                                 # action en cas d'echec
+
+
+# https://careerkarma.com/blog/python-try-except/
 
 ####################################################
             # while loop / boucle while
@@ -248,6 +273,10 @@ print("""
 # # ...                       les instructions pour déplacer la tortue
 
 # turtle.done()               # empêche la fenêtre graphique de se fermer
+
+# Quelques modules à importer:
+
+import random                  # donne accès à random.randint (par exemple) pour définir une valeur aléatoire
 
 ####################################################
                 # increment / decrement
