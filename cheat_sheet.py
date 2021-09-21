@@ -263,7 +263,7 @@ print("""
                 # import
 ####################################################
 
-# pour importer des "modules" (basiquement des bibliothèque):
+# pour importer des "modules" (basiquement des bibliothèques):
 # exemple:
 
 # import turtle               # j'importe mon module
@@ -276,7 +276,7 @@ print("""
 
 # Quelques modules à importer:
 
-import random                  # donne accès à random.randint (par exemple) pour définir une valeur aléatoire
+# import random                  # donne accès à random.randint (par exemple) pour définir une valeur aléatoire
 
 ####################################################
                 # increment / decrement
@@ -295,26 +295,92 @@ import random                  # donne accès à random.randint (par exemple) po
     # tuples
     ########################
 
-# Les tuplus sont des tableaux immuable (immutable, ne pouvant être changé une fois déclaré)
-
+# Les tuples sont des tableaux immuable (immutable, ne pouvant être changé une fois déclaré)
+# de par leur nature, ils sont moins gourmand en mémoire que les "lists" présentées après
 # déclaration avec des paranthèses
 
-new_tuples_test_str = ("Mon premier élément", "Mon second élément", "Mon troisième élément", "Mon quatrième élément")
-new_tuples_test_int = (15, 27, 3, 98, 55)
-new_tuples_test_mixt = ("Mon premier élément", 13, "Mon second élément", 77, 88)
-new_tuples_of_tuples = (new_tuples_test_str, new_tuples_test_str, new_tuples_test_mixt)
+# new_tuples_test_str = ("Mon premier élément", "Mon second élément", "Mon troisième élément", "Mon quatrième élément")
+# new_tuples_test_int = (15, 27, 3, 98, 55)
+# new_tuples_test_mixt = ("Mon premier élément", 13, "Mon second élément", 77, 88)
+# new_tuples_of_tuples = (new_tuples_test_str, new_tuples_test_str, new_tuples_test_mixt)
+
+# persons = ("Brian", "Bob", "Alice", "Jean")
+
+# print(len(persons))                # affiche la longueur du tableau persons, içi 4
+# print(persons[0])                  # imprimme le contenu du premier élément du tableau persons, içi "Brian"
+# print(persons[-1])                 # je peux également parcourir mon tableau en sens inverse
+
 
 # print(new_tuples_of_tuples)               # renvoie tous les éléments du tableau
+# print(len())
 
-values = range(6, 8, 2)                        # la fonction range permet de déclarer à l'avance un interval de valeur
-                                            # le premier argument donne la position de départ
-                                            # le second argument donne la position d'arrêt
-                                            # le troisième argument (step) 
+    # list
+    ########################
 
-print(values)
+# déclaration avec des crochets
+
+# persons = ["Brian", "Bob", "Alice", "Jean"]         # déclaration de la list
+# new_person = "David"                                # déclaration d'une variable que je veux rajouter ensuite à ma list
+# persons.append(new_person)                          # ajout de l'élément "new person" à la fin de mon tableau
+# persons[0] = "Steeven"                              # içi je change le premier élément de ma list (Brian par Steeven)
 
 
+####################################################
+#                                                  #
+#                                                  #
+#               Fonctions diverses                 #
+#                                                  #
+#                                                  #
+####################################################
 
+####################################################
+                # range
+####################################################
+
+# On l'utilise la plupart du temps pour faire nos boucles for
+
+# values = range(6, 8, 2)          # la fonction range permet de déclarer à l'avance un interval de valeur
+#                                  # (falcutatif, par défaut 0) le premier argument donne la position de départ
+#                                  # le second argument donne la position d'arrêt
+#                                  # (falcutatif, par défaut 1) le troisième argument (step) détermine l'incrémentation
+
+# print(values)
+
+# https://towardsdatascience.com/exploring-python-range-function-d509ebd36ec
+
+####################################################
+                # lowercase / uppercase
+####################################################
+
+# hello = "Hello"
+# print(hello)
+# print(hello.lower())
+# print(hello.upper())
+
+####################################################
+                # sort
+####################################################
+
+# fonction pour trier des listes:
+
+# def custom_sort(e):
+#     return len(e)
+
+# test_sort = ["cc", "bbbb", "a", "eee", "ddddd", "1234567"]
+# print(test_sort)
+# test_sort.sort()                            # triera automatiquement par ordre alphabétique (nombre en premier)
+# print(test_sort)                     
+# test_sort.sort(reverse = True)              # même chose mais en ordre inversé
+# print(test_sort) 
+# test_sort.sort(key = custom_sort)           # içi on crée une fonction pour renvoyer la liste trier par le nombre de char présents
+# print(test_sort) 
+
+####################################################
+                # 
+####################################################
+####################################################
+                # 
+####################################################
 ####################################################
                 # 
 ####################################################
@@ -323,5 +389,6 @@ def exit_programm():
     print("")
     print("Please press any key to exit the programm.")
     input("")
+
 
 exit_programm()
