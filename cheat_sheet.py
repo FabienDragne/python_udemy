@@ -289,8 +289,31 @@ import random                  # donne accès à random.randint (par exemple) po
 # a += 1              # donc 2
 
 ####################################################
-                # 
+            # Collections / Tuples / List
 ####################################################
+
+    # tuples
+    ########################
+
+# Les tuplus sont des tableaux immuable (immutable, ne pouvant être changé une fois déclaré)
+
+# déclaration avec des paranthèses
+
+new_tuples_test_str = ("Mon premier élément", "Mon second élément", "Mon troisième élément", "Mon quatrième élément")
+new_tuples_test_int = (15, 27, 3, 98, 55)
+new_tuples_test_mixt = ("Mon premier élément", 13, "Mon second élément", 77, 88)
+new_tuples_of_tuples = (new_tuples_test_str, new_tuples_test_str, new_tuples_test_mixt)
+
+# print(new_tuples_of_tuples)               # renvoie tous les éléments du tableau
+
+values = range(6, 8, 2)                        # la fonction range permet de déclarer à l'avance un interval de valeur
+                                            # le premier argument donne la position de départ
+                                            # le second argument donne la position d'arrêt
+                                            # le troisième argument (step) 
+
+print(values)
+
+
 
 ####################################################
                 # 
